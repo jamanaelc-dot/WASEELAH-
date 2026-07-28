@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "tasks": {
+      "title": "Tasks",
+      "description": "Real-time synchronized tasks across devices",
+      "properties": [
+        { "name": "title", "type": "string", "description": "Task title", "required": true },
+        { "name": "description", "type": "string", "description": "Task details" },
+        { "name": "status", "type": "string", "description": "todo, in_progress, completed", "required": true },
+        { "name": "priority", "type": "string", "description": "low, medium, high", "required": true },
+        { "name": "category", "type": "string", "description": "Category tag" },
+        { "name": "assignedTo", "type": "string", "description": "Assigned user" },
+        { "name": "createdBy", "type": "string", "description": "User ID of creator", "required": true },
+        { "name": "createdByName", "type": "string", "description": "Name of creator" },
+        { "name": "createdAt", "type": "timestamp", "description": "Creation timestamp", "required": true },
+        { "name": "updatedAt", "type": "timestamp", "description": "Last update timestamp" }
+      ]
+    },
+    "activities": {
+      "title": "Activities",
+      "description": "Real-time activity audit log",
+      "properties": [
+        { "name": "action", "type": "string", "description": "created, updated, deleted, completed", "required": true },
+        { "name": "itemTitle", "type": "string", "description": "Target item title" },
+        { "name": "userName", "type": "string", "description": "User display name", "required": true },
+        { "name": "timestamp", "type": "timestamp", "description": "Activity timestamp", "required": true }
+      ]
+    },
+    "presence": {
+      "title": "User Presence",
+      "description": "Live online user tracking",
+      "properties": [
+        { "name": "userName", "type": "string", "description": "Display name", "required": true },
+        { "name": "userAvatar", "type": "string", "description": "Avatar image seed" },
+        { "name": "lastSeen", "type": "timestamp", "description": "Last ping timestamp", "required": true },
+        { "name": "status", "type": "string", "description": "online, idle" }
+      ]
+    }
+  }
+}
